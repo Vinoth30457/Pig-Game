@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* global css */
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* customize */
+  background-color: #1c2042;
+  color: white;
+  border: 2px solid #1c2042;
+}
+
+.card-container {
+  width: 18rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.game-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  -webkit-text-stroke: 2px black;
+  text-shadow: 0px 1px 20px white;
+  color: white;
+  font-size: 3rem;
+}
+
+.winning-score {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 0px 1px 3px white;
+  color: white;
+}
+
+.set-num {
+  width: 6rem;
+  height: 2.45rem;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.set-value {
+  background-color: #ff7979;
+  padding: 0.5rem;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.player {
+  width: 18rem;
+  height: 15rem;
+  background-color: #ecf0f1;
+}
+
+.active-player {
+  background-color: #7f8c8d;
+}
+
+.winner {
+  background-color: orange;
+}
+
+.player-1st,
+.player-2nd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-1-title {
+  -webkit-text-stroke: 1px white;
+  text-shadow: 0px 1px 3px black;
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.total {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: black;
+}
+
+.current-container {
+  background-color: #ff0084;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+
+.current-value {
+  font-size: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dice {
+  width: 3rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn--new,
+.btn--roll,
+.btn--hold {
+  padding: 0.5rem;
+  background-color: #2196f3;
+}
+
+.text {
+  -webkit-text-stroke: 1px black;
+  text-shadow: 0px 1px 3px green;
+  color: green;
+  /* color: green; */
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+@media screen and (min-width: 576px) {}
+
+/* Medium devices (tablets) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops) */
+
+@media (min-width: 991px) {
+  .game-container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .card-container {
+    width: 100%
+  }
+
+  .player {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .dice {
+    border: 2px solid black;
+    width: 4rem;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    position: absolute;
+    left: 20rem;
+    top: 1.5rem
+  }
+
+  .current-container {
+    text-transform: uppercase;
+    width: 13rem;
+  }
+
+  .player-0 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+
+  .player-1 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* Extra large devices (large desktops) */
+
+@media (min-width: 1200px) {}
